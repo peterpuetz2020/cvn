@@ -1,0 +1,32 @@
+---
+title: "Data from the Clinical Virology Network (CVN)"
+subtitle: "A short introduction"
+author: "Alex U., Peter P."
+format:
+  beamer:
+    theme: Madrid
+    aspectratio: 169
+---
+
+## Background
+
+- Bullet point
+- Bullet point
+- <https://public.clinical-virology.net/>
+
+
+
+## Data set
+
+![](../Results/viruses.JPG){fig-align="center" width="80%"}
+
+## Exemplary results for SARS-CoV-2 and Influenza
+
+![](../Results/cvn_plots_infl_sars.png){fig-align="center" width="70%"}
+
+## Comparison with established surveillance systems: Influenza
+
+![](../Results/influenza_comparison_plot.png){fig-align="center" width="80%"}
+## Comparison with established surveillance systems: SARS-CoV-2
+
+![](../Results/sars_comparison_plot.png){fig-align="center" width="80%"}

@@ -51,7 +51,7 @@ plot_std_group <- function(df, cols, title) {
     #   labels = kw_label
     # ) +
     scale_x_date(
-      date_breaks = "8 weeks",
+      date_breaks = "12 weeks",
       labels = function(x) {
         iso <- ISOweek::ISOweek(x)     # "YYYY-Www"
         year <- substr(iso, 1, 4)
@@ -65,13 +65,17 @@ plot_std_group <- function(df, cols, title) {
       y = "Standardisierter Wert",
       color = NULL
     ) +
-    theme_minimal(base_size = 12) +
+    theme_minimal(base_size = 16) +
     theme(
-      axis.text.x = element_text(angle = 0, hjust = 0.5),
+      axis.text.x = element_text(angle = 0, hjust = 0.5,size = 14),
       panel.grid.minor = element_blank(),
       legend.position = "right",
-      axis.text.y = element_blank()
-    )
+      axis.text.y = element_blank(),
+          axis.text = element_text(size = 14),
+          axis.title = element_text(size = 16),
+          plot.title = element_text(size = 18, face = "bold"),
+          legend.text = element_text(size = 14),
+          legend.title = element_text(size = 15)   )
 }
 
 influenza_cols <- c(

@@ -197,8 +197,18 @@ cvn_weekly_pos <- weekly_pos %>%
 number_plot <- ggplot(weekly_pos, aes(x = kalenderwoche, y = n_pos)) +
   geom_point(size = 1) +
   geom_smooth(span = 0.1) +
-  scale_x_date(date_breaks = "8 weeks", date_labels = "%V\n %G") +
-  theme_classic() +
+  scale_x_date(date_breaks = "12 weeks", date_labels = "%V\n %G") +
+  theme_minimal(base_size = 16) +
+  theme(
+    axis.text.x = element_text(angle = 0, hjust = 0.5,size = 14),
+    panel.grid.minor = element_blank(),
+    legend.position = "right",
+    axis.text = element_text(size = 14),
+    axis.title = element_text(size = 16),
+    plot.title = element_text(size = 18, face = "bold"),
+    legend.text = element_text(size = 14),
+    legend.title = element_text(size = 15),
+    strip.text = element_text(size = 16, face = "bold")) +
   labs(x = "Kalenderwoche", y = "Positive Tests (Anzahl, Duplikate entfernt)") +
   facet_wrap(~virus, scales = "free_y")
 #ggsave(here(results_here,"cvn_number_of_positive_tests.png"), width = 10, height = 6, dpi = 300)
@@ -231,8 +241,18 @@ cvn_weekly_share_pos <- weekly_share_pos %>%
 propotion_plot <- ggplot(weekly_share_pos, aes(x = kalenderwoche, y = share_pos)) +
   geom_point(size = 1) +
   geom_smooth(span = 0.1) +
-  scale_x_date(date_breaks = "8 weeks", date_labels = "%V\n %G") +
-  theme_classic() +
+  scale_x_date(date_breaks = "12 weeks", date_labels = "%V\n %G") +
+  theme_minimal(base_size = 16) +
+  theme(
+    axis.text.x = element_text(angle = 0, hjust = 0.5,size = 14),
+    panel.grid.minor = element_blank(),
+    legend.position = "right",
+    axis.text = element_text(size = 14),
+    axis.title = element_text(size = 16),
+    plot.title = element_text(size = 18, face = "bold"),
+    legend.text = element_text(size = 14),
+    legend.title = element_text(size = 15),
+    strip.text = element_text(size = 16, face = "bold")) +
   labs(x = "Kalenderwoche", y = "Positive Tests (Anteil)") +
   facet_wrap(~virus, scales = "free_y")
 #ggsave(here(results_here,"cvn_proportion_of_positive_tests.png"), width = 10, height = 6, dpi = 300)
